@@ -262,42 +262,18 @@ numArrays.forEach(arr => {
 });
 
 
-console.log('Exercise 15 result:\n', total);
+// console.log('Exercise 15 result:\n', total);
+// // Initialize a new repository
+// git init
 
-/*
-Exercise 16: Push to GitHub
+// // Add the file to the staging area
+// git add /workspaces/JavaScript-Arrays/app.js
 
-1) Initialize a new Git repository in your project directory.
-2) Add all files to the staging area.
-3) Commit the changes with a meaningful message.
-4) Create a new repository on GitHub.
-5) Add the GitHub repository as a remote to your local repository.
-6) Push the local commits to the GitHub repository.
+// // Commit the changes
+// git commit -m "Add JavaScript array exercises"
 
-Complete Exercise 16 in the space below:
-*/
+// // Add the remote repository URL
+// git remote add origin <your-repository-url>
 
-// Step 1: Initialize a new Git repository
-// Open your terminal and run the following command in your project directory:
-console.log('Initializing a new Git repository...');
-console.log('> git init');
-
-// Step 2: Add all files to the staging area
-console.log('Adding all files to the staging area...');
-console.log('> git add .');
-
-// Step 3: Commit the changes with a meaningful message
-console.log('Committing the changes...');
-console.log('> git commit -m "Initial commit with array exercises"');
-
-// Step 4: Create a new repository on GitHub
-console.log('Creating a new repository on GitHub...');
-// Go to GitHub, create a new repository, and copy the repository URL
-
-// Step 5: Add the GitHub repository as a remote to your local repository
-console.log('Adding the GitHub repository as a remote...');
-console.log('> git remote add origin <repository-url>');
-
-// Step 6: Push the local commits to the GitHub repository
-console.log('Pushing the local commits to the GitHub repository...');
-console.log('> git push -u origin main');
+// // Push the changes to the remote repository
+// git push -u origin main
