@@ -19,6 +19,7 @@ Note: 'pizza' should be the first item in the array, followed by 'cheeseburger'.
 
 Complete Exercise 2 in the space below:
 */
+foods.push('pizza', 'cheeseburger');
 
 
 
@@ -32,7 +33,7 @@ Exercise 3: Insert at the beginning
 Complete Exercise 3 in the space below:
 */
 
-
+foods.unshift('taco');
 
 console.log('Exercise 3 result:', foods);
 
@@ -46,16 +47,10 @@ Exercise 4: Access an array element
 
 Complete Exercise 4 in the space below:
 */
-
+let favFood = foods[1];
 
 
 console.log('Exercise 4 result:', favFood);
-
-splice(start)
-splice(start, deleteCount)
-splice(start, deleteCount, item0)
-splice(start, deleteCount, item0, item1)
-splice(start, deleteCount, item0, item1, /* …, */ itemN)
 
 /*
 Exercise 5: Insert an element between two others
@@ -64,6 +59,7 @@ Exercise 5: Insert an element between two others
 
 Complete Exercise 5 in the space below:
 */
+foods.splice(2, 0, 'tofu');
 
 
 
@@ -76,7 +72,7 @@ Exercise 6: Replace elements
 
 Complete Exercise 6 in the space below:
 */
-
+foods.splice(1, 1, 'sushi', 'cupcake');
 
 
 console.log('Exercise 6 result:', foods);
@@ -91,7 +87,7 @@ Exercise 7: Using the `slice()` method
 
 Complete Exercise 7 in the space below:
 */
-
+let yummy = foods.slice(1, 3);
 
 
 console.log('Exercise 7 result:', yummy);
@@ -106,7 +102,7 @@ Exercise 8: Finding an index
 
 Complete Exercise 8 in the space below:
 */
-
+let soyIdx = foods.indexOf('tofu');
 
 
 console.log('Exercise 8 result:', soyIdx);
@@ -124,7 +120,7 @@ Note: The final result should log as:
 
 Complete Exercise 9 in the space below:
 */
-
+let allFoods = foods.join(' -> ');
 
 
 console.log('Exercise 9 result:', allFoods);
@@ -139,36 +135,7 @@ Exercise 10: Check for an element
 
 Complete Exercise 10 in the space below:
 */
-
-
-
-console.log('Exercise 10 result:', hasSoup);
-
-/*
-Exercise 10: Check for an element
-
-1) Using the .includes() method, check if the `foods` array contains the string
-   'soup'.
-
-2) Assign the result to a variable called `hasSoup``.
-
-Complete Exercise 10 in the space below:
-*/
-
-
-
-console.log('Exercise 10 result:', hasSoup);
-
-/*
-Exercise 10: Check for an element
-
-1) Using the .includes() method, check if the `foods` array contains the string
-   'soup'.
-
-2) Assign the result to a variable called `hasSoup``.
-
-Complete Exercise 10 in the space below:
-*/
+let hasSoup = foods.includes('soup');
 
 
 
@@ -185,8 +152,14 @@ Hint: Initialize the `odds` variable to an empty array before the iteration.
 
 Complete Exercise 11 in the space below:
 */
-
+const odds = [];
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+
+nums.forEach(num => {
+   if (num % 2 !== 0) {
+      odds.push(num);
+   }
+});
 
 
 
@@ -210,6 +183,19 @@ Exercise 12: FizzBuzz with arrays
 
 Complete Exercise 12 in the space below:
 */
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+nums.forEach(num => {
+   if (num % 3 === 0 && num % 5 === 0) {
+      fizzbuzz.push(num);
+   } else if (num % 3 === 0) {
+      fizz.push(num);
+   } else if (num % 5 === 0) {
+      buzz.push(num);
+   }
+}
+);
 
 
 
@@ -229,13 +215,15 @@ Exercise 13: Retrieve the Last Array
 
 Complete Exercise 13 in the space below:
 */
-
 const numArrays = [
-	[100, 5, 23],
+   [100, 5, 23],
 	[15, 21, 72, 9],
 	[45, 66],
 	[7, 81, 90]
 ];
+
+
+const numList = numArrays[numArrays.length - 1];
 
 console.log('Exercise 13 result:', numList);
 
@@ -249,7 +237,7 @@ Exercise 14: Accessing within nested arrays
 
 Complete Exercise 14 in the space below:
 */
-
+let num = numArrays[2][1];
 
 
 console.log('Exercise 14 result:', num);
@@ -266,8 +254,50 @@ Hint: Be sure to declare and initialize the total variable before the iterations
 
 Complete Exercise 15 in the space below:
 */
-
+let total = 0;
+numArrays.forEach(arr => {
+   arr.forEach(num => {
+      total += num;
+   });
+});
 
 
 console.log('Exercise 15 result:\n', total);
 
+/*
+Exercise 16: Push to GitHub
+
+1) Initialize a new Git repository in your project directory.
+2) Add all files to the staging area.
+3) Commit the changes with a meaningful message.
+4) Create a new repository on GitHub.
+5) Add the GitHub repository as a remote to your local repository.
+6) Push the local commits to the GitHub repository.
+
+Complete Exercise 16 in the space below:
+*/
+
+// Step 1: Initialize a new Git repository
+// Open your terminal and run the following command in your project directory:
+console.log('Initializing a new Git repository...');
+console.log('> git init');
+
+// Step 2: Add all files to the staging area
+console.log('Adding all files to the staging area...');
+console.log('> git add .');
+
+// Step 3: Commit the changes with a meaningful message
+console.log('Committing the changes...');
+console.log('> git commit -m "Initial commit with array exercises"');
+
+// Step 4: Create a new repository on GitHub
+console.log('Creating a new repository on GitHub...');
+// Go to GitHub, create a new repository, and copy the repository URL
+
+// Step 5: Add the GitHub repository as a remote to your local repository
+console.log('Adding the GitHub repository as a remote...');
+console.log('> git remote add origin <repository-url>');
+
+// Step 6: Push the local commits to the GitHub repository
+console.log('Pushing the local commits to the GitHub repository...');
+console.log('> git push -u origin main');
