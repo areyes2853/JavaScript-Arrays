@@ -262,7 +262,7 @@ numArrays.forEach(arr => {
 });
 
 
-// console.log('Exercise 15 result:\n', total);
+console.log('Exercise 15 result:\n', total);
 // // Initialize a new repository
 // git init
 
